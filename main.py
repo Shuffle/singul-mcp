@@ -5,7 +5,7 @@ import sys
 from typing import List, Optional, Dict, Any
 from mcp.server.fastmcp import FastMCP
 
-sys.stderr = open(os.devnull, 'w')
+# sys.stderr = open(os.devnull, 'w')
 
 api_key = os.environ.get("SHUFFLE_API_KEY")
 shuffle_url = os.environ.get("SHUFFLE_URL", "https://shuffler.io")
@@ -74,3 +74,6 @@ def list_shuffle_apps() -> Dict[str, Any]:
         "example_apps": ["slack", "jira", "github", "email", "webhook"],
         "shuffle_client_status": "initialized" if singul else "not initialized"
     }
+    
+if __name__ == "__main__":
+    mcp.run()
