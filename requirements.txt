@@ -1,2 +1,4 @@
 mcp[cli]
 shufflepy
+requests
+pydantic
